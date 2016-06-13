@@ -26,18 +26,6 @@ input[type="text"]{
     max-width: 1024px;
     margin: 0 auto;
 }
-.round-radius{
-    -webkit-border-radius:$border-radius;
-    -moz-border-radius:$border-radius;
-    -ms-border-radius:$border-radius;
-    border-radius:$border-radius;
-}
-.box-sizing{
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    -ms-box-sizing:border-box;
-    box-sizing:border-box;
-}
 
 /*Search Widget*/
 #search-section{
