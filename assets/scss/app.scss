@@ -1,10 +1,12 @@
 $color-blue:#0080af;
+$color-black:#000;
 $color-gray : #cfd4db;
+$color-gray-dark : #999;
 $color-white : #fff;
 $border-radius :5px;
 $screen-md : 1024px;
 $screen-sm : 768px;
-$screen-xs : 420px;
+$screen-xs : 480px;
 
 body{
     font-family: "Open Sans",sans-serif;
@@ -27,12 +29,20 @@ input[type="text"]{
     margin: 0 auto;
 }
 
+.box-shadow{
+    -webkit-box-shadow: 0 0 10px $color-gray-dark;
+    -moz-box-shadow: 0 0 10px $color-gray-dark;
+    -ms-box-shadow: 0 0 10px $color-gray-dark;
+    box-shadow: 0 0 10px $color-gray-dark;
+}
+
 /*Search Widget*/
 #search-section{
     padding:30px;
     h1{
-        font-size: 26px;
-        color:$color-blue;
+        font-size: 35px;
+        color:$color-black;
+        text-align: center;
     } 
 }
 
@@ -50,7 +60,7 @@ input[type="text"]{
         padding: 6px 6px 20px;
         
         @media screen and (max-width: $screen-md) {
-            width: calc(33% - 20px);
+            width: calc(33.33% - 20px);
         }
         
         @media screen and (max-width: $screen-sm) {
@@ -78,4 +88,33 @@ input[type="text"]{
 }
 
 
+.search-header{
+    text-align: right;
+    background: $color-gray-dark;
+    color: $color-black;
+    padding: 6px;
+    margin-bottom: 10px;
+    
+    @media screen and (max-width: $screen-xs) {
+        text-align: center;
+    }
+    
+    &__info{
+        float: left;
+        @media screen and (max-width: $screen-sm) {
+            float: none;
+        }
+    }
+    &__filters{
+        @media screen and (max-width: $screen-xs) {
+            margin-top: 10px;
+        }
+        select{
+            @media screen and (max-width: $screen-xs) {
+                width:100%;
+                margin: 2px 0;
+            }
+        }
+    }
+}
  
