@@ -1,0 +1,42 @@
+
+<div>
+    Total {{itemsCount}}
+    Serahced: {{filteredCount?.count}}
+    <select (change)="0" #searchTemperament >
+        <option value="">Temperament</option>
+        <option value="active">Active</option>
+        <option value="affable">Affable</option>
+        <option value="affectionate">Affectionate</option>
+        <option value="charming">Charming</option>
+        <option value="demanding">Demanding</option>
+        <option value="docile">Docile</option>
+        <option value="easy nature">Easy Nature</option>
+        <option value="even-tempered">Even Tempered</option>
+        <option value="intelligent">Intelligent</option>
+        <option value="laid-back">Laid Back</option>
+        <option value="passive">Passive</option>
+        <option value="placid">Placid</option>
+        <option value="pleasant">Pleasant</option>
+        <option value="reserved">Reserved</option>
+        <option value="vocal">Vocal</option>
+    </select>
+    <select (change)="0" #searchGrooming>
+        <option value="">Grooming</option>
+        <option value="average">Average</option>
+        <option value="difficult">Difficult</option>
+        <option value="easy">Easy</option>
+        <option value="high">High</option>
+    </select>
+    <select (change)="0" #searchEnergy>
+        <option value="">Energy</option>
+        <option value="average">Average</option>
+        <option value="high">High</option>
+        <option value="low">Low</option>
+    </select>
+</div>
+<div class="search-result">
+    
+    <!--Pass 'filteredCount', this will be set after filtering and update  in view-->
+    <search-item ngClass="search-result__item" [searchItem]="searchItem" *ngFor="#searchItem of searchItems | searchPipe: [searchTemperament.value,searchGrooming.value,searchEnergy.value, filteredCount]">
+    </search-item>
+</div>
